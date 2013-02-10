@@ -63,11 +63,6 @@ nmap <leader>sv :so $MYVIMRC<CR>
 let g:sparkup=' '
 let g:sparkupExecuteMapping='<D-e>'
 
-" Powerline
-set rtp+=~/dotfiles/vim/bundle/powerline/powerline/bindings/vim
-let g:Powerline_theme="skwp"
-let g:Powerline_colorscheme="skwp"
-let g:Powerline_symbols='fancy'
 
 " NerdTree
 nmap ,nt :NERDTreeToggle<CR>
@@ -101,7 +96,7 @@ autocmd FileType php.html let b:surround_45 = "<?php \r ?>" "press -
 
 " GUI and Colorscheme
 if has("gui_running")
-	set guifont=Inconsolata\ for\ Powerline:h11
+	set guifont=Menlo\ for\ Powerline:h12
 	colorscheme desert
 	winpos 0 0
 	winsize 190 45
