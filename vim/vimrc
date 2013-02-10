@@ -60,8 +60,11 @@ nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
 
 " Sparkup
-let g:sparkup=' '
-let g:sparkupExecuteMapping='<D-e>'
+"let g:sparkup=' '
+"let g:sparkupExecuteMapping='<D-e>'
+
+" Snipmate Reload
+nmap <leader>r :call ReloadAllSnippets()<CR>
 
 
 " NerdTree
