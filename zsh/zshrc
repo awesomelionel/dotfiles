@@ -18,6 +18,7 @@ ZSH_THEME="steeef"
  alias ohmyzsh="vim ~/.oh-my-zsh"
  alias vimrc="vim ~/.vimrc"
  alias hosts="vim /etc/hosts"
+ alias cl="clear"
 
 
 # IP addresses
