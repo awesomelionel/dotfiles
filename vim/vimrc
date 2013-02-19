@@ -60,9 +60,10 @@ nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
 
 " Sparkup
-let g:sparkup=' '
-let g:sparkupExecuteMapping='<D-e>'
-
+let g:sparkup = 'sparkup'
+let g:sparkupArgs = '--no-last-newline'
+let g:sparkupExecuteMapping = '<c-e>'
+let g:sparkupNextMapping = ''
 " Snipmate Reload
 nmap <leader>r :call ReloadAllSnippets()<CR>
 
@@ -85,6 +86,10 @@ vmap <leader>, :call NERDComment(0, "invert")<CR>
 au BufRead *.php set ft=php.html
 au BufNewFile *.php set ft=php.html
 autocmd BufNewFile,BufRead *.json set ft=javascript 
+
+" Auto set file type for css
+au BufRead *.css set omnifunc=csscomplete
+au BufNewFile *.css set omnifunc=csscomplete 
 
 " Surround : Plugin keybinding
 let g:surround_37 = "<% \r %>" " press % 
