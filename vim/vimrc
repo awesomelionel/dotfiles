@@ -4,6 +4,7 @@ execute pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+setlocal spell spelllang=en_us  " Set Spelling
 set nocompatible 				" Don't care about vi
 set encoding=utf-8
 syntax on 						" Switch on syntax highlighting
@@ -95,6 +96,9 @@ au BufNewFile *.css set omnifunc=csscomplete
 let g:surround_37 = "<% \r %>" " press % 
 let g:surround_61 = "<%= \r %>" " press = 
 autocmd FileType php.html let b:surround_45 = "<?php \r ?>" "press - 
+
+" CTRL p 
+:nmap ; :CtrlPBuffer<CR>
 
 " LustyJuggler suppress warning
 "let g:LustyJugglerSuppressRubyWarning=1
