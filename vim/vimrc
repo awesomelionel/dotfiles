@@ -61,10 +61,10 @@ nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
 
 " Sparkup
-let g:sparkup = 'sparkup'
-let g:sparkupArgs = '--no-last-newline'
-let g:sparkupExecuteMapping = '<c-e>'
-let g:sparkupNextMapping = ''
+let g:sparkup='sparkup'
+let g:sparkupArgs='--no-last-newline'
+let g:sparkupExecuteMapping='<c-e>'
+let g:sparkupNextMapping= ''
 " Snipmate Reload
 nmap <leader>r :call ReloadAllSnippets()<CR>
 
