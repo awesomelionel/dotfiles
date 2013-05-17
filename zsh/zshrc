@@ -13,6 +13,8 @@ unset file
 ZSH_THEME="steeef"
 
 # Example aliases
+ alias ack="nocorrect ack"
+ alias irb="irb --readline -r irb/completion"
  alias zshconfig="vim ~/.zshrc"
  alias tmuxconfig="vim ~/.tmux.conf"
  alias ohmyzsh="vim ~/.oh-my-zsh"

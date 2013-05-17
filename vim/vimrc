@@ -17,8 +17,8 @@ let maplocalleader = "\\"
 
 " Presentation Settings
 set number						" Set Line numbering
-set tabstop=4					" Tabstops are 4 spaces
-set shiftwidth=4				" Number of spaces for indent	
+set tabstop=2					" Tabstops are 4 spaces
+set shiftwidth=2				" Number of spaces for indent	
 set nowrap						" Do not wrap words (view) 
 set textwidth=0 				" Do not wrap word (insert)
 set showcmd						" Show the current command in the lower right corner
@@ -45,6 +45,13 @@ set hlsearch					" Enable search highlighting
 set ignorecase					" set the search scan so that it ignores case when the search is all lower
 set smartcase					" case but recognizes uppercase if it's specified
 
+" setting autoindenting for all filetypes
+set autoindent
+" setting the indenting width for html, xml and php files (you can add more)
+autocmd FileType html,xml,php setlocal expandtab shiftwidth=2 tabstop=2
+" indent the whole file and return to original position
+nmap ,= mzgg=G\`z
+
 " KeyBindings
 "Clear search when you press ,/
 nmap <leader>/ :nohlsearch<CR>
@@ -66,7 +73,7 @@ nmap <leader>sv :so $MYVIMRC<CR>
 "let g:sparkupExecuteMapping='<c-e>'
 "let g:sparkupNextMapping= ''
 " Snipmate Reload
-"nmap <leader>r :call ReloadAllSnippets()<CR>
+nmap <leader>r :call ReloadAllSnippets()<CR>
 
 " ZenCoding
 let g:user_zen_expandabbr_key = '<c-e>'
@@ -92,6 +99,13 @@ vmap <leader>, :call NERDComment(0, "invert")<CR>
 au BufRead *.php set ft=php.html
 au BufNewFile *.php set ft=php.html
 autocmd BufNewFile,BufRead *.json set ft=javascript 
+
+" Auto set filetype for PHP.HTML
+au BufRead,BufNewFile *.ctp set ft=php.html
+
+" Auto set filetype for html.erb
+au BufRead *.html.erb set ft=html.eruby
+au BufNewFile *.html.erb set ft=html.eruby
 
 " Auto set file type for css
 au BufRead *.css set omnifunc=csscomplete

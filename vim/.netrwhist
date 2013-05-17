@@ -1,7 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/Lino/dotfiles/.git'
-let g:netrw_dirhist_2='/Users/Lino/Work/middleman_project'
-let g:netrw_dirhist_3='/Users/Lino/Work/meridian'
-let g:netrw_dirhist_4='/private/etc/apache2'
-let g:netrw_dirhist_5='/Users/lionel/dotfiles/vim/bundle/sparkup'
+let g:netrw_dirhist_cnt =0
