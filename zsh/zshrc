@@ -69,14 +69,15 @@ ZSH_THEME="steeef"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
 #export PATH=/opt/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init - zsh)"
 #. ~/.nvm/nvm.sh
-export PATH="$HOME/.rbenv/bin:/usr/local/bin/npm:$PATH"
+#export GOPATH="$HOME/go"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init - zsh)"
-export NODE_PATH="/usr/local/lib/node"
-
+#export NODE_PATH="/usr/local/lib/node"
+#export PATH=/usr/local/php5/bin:$PATH
+##/usr/local/bin/npm:
+#export PATH=$PATH:$GOPATH/bin
 . `brew --prefix`/etc/profile.d/z.sh

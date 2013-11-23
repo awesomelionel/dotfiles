@@ -7,9 +7,11 @@ call pathogen#helptags()
 setlocal spell spelllang=en_us  " Set Spelling
 set nocompatible 				" Don't care about vi
 set encoding=utf-8
-syntax on 						" Switch on syntax highlighting
 filetype off                	" Set filetype stuff to on
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
+syntax on 						" Switch on syntax highlighting
 
 "Settings
 let mapleader = ","
@@ -55,6 +57,9 @@ nmap ,= mzgg=G\`z
 " KeyBindings
 "Clear search when you press ,/
 nmap <leader>/ :nohlsearch<CR>
+
+" leader w to save 
+nmap <leader>ww :w<CR>
 
 "Change window key remap
 nmap <leader>w <C-w>w 
