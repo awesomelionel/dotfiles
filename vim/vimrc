@@ -73,17 +73,14 @@ noremap <silent> <C-l> <C-W>l
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
 
-" Sparkup
-"let g:sparkup='sparkup'
-"let g:sparkupArgs='--no-last-newline'
-"let g:sparkupExecuteMapping='<c-e>'
-"let g:sparkupNextMapping= ''
 " Snipmate Reload
-nmap <leader>r :call ReloadAllSnippets()<CR>
+"nmap <leader>r :call ReloadAllSnippets()<CR>
 
-" ZenCoding
-let g:user_zen_expandabbr_key = '<c-e>'
-let g:use_zen_complete_tag = 1
+" ZenCoding : Now with Emmet
+let g:user_emmet_expandabbr_key= '<c-e>'
+let g:user_emmet_expandaword_key= '<c-f>'
+autocmd FileType html imap <tab> <plug>(EmmetExpandAbbr)
+let g:use_emmet_complete_tag = 1
 
 " NerdTree
 nmap ,nt :NERDTreeToggle<CR>
@@ -121,10 +118,7 @@ let g:surround_61 = "<%= \r %>" " press =
 autocmd FileType php.html let b:surround_45 = "<?php \r ?>" "press - 
 
 " CTRL P = Jumping through open buffers
-:nmap ; :CtrlPBuffer<CR>
-
-" CoffeeScript Plugin
-"au BufWritePost *.coffee silent CoffeeMake!
+:nmap ' :CtrlPBuffer<CR>
 
 " GUI and Colorscheme
 if has("gui_running")
