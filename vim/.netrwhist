@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/private/etc/apache2'
 let g:netrw_dirhist_2='/Users/Lino/LearnRuby/command-line-ruby'
 let g:netrw_dirhist_3='/Users/Lino/sandbox/blog/anchor/config'
 let g:netrw_dirhist_4='/Users/Lino/go/src/github.com/awesomelionel/hello'
 let g:netrw_dirhist_5='/private/etc/apache2'
 let g:netrw_dirhist_6='/Users/Lino/sandbox/php_dev_box'
+let g:netrw_dirhist_7='/Users/Lino/dotfiles/tmux'
