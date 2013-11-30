@@ -34,7 +34,6 @@ set linespace=3					" Larger Line Height
 set go-=T						" Hides MacVim toolbar
 set hidden 						" Set Hidden for LustyExplorer
 set backspace=indent,eol,start
-set clipboard=unnamed
 " Behaviours
 "au FocusLost * :wa				" This means whenever Vim loses focus, it saves the files in the buffer
 set history=100					" Keep some stuff in the history
