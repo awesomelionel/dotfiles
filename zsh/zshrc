@@ -14,6 +14,7 @@ ZSH_THEME="steeef"
 
 # Example aliases
  alias ack="nocorrect ack"
+ alias yo="nocorrect yo"
  alias irb="irb --readline -r irb/completion"
  alias zshconfig="vim ~/.zshrc"
  alias tmuxconfig="vim ~/.tmux.conf"
@@ -24,6 +25,15 @@ ZSH_THEME="steeef"
  alias redis="redis-server /usr/local/etc/redis.conf"
  alias mysql-server="mysql.server start"
  alias composer='nocorrect composer'
+ alias server='python -m SimpleHTTPServer 8888'
+ alias bower='noglob bower'
+ alias claer='clear'
+ 
+# Apache Vhost config
+alias vhost="sudo vim /etc/apache2/extra/httpd-vhosts.conf"
+
+# /etc/hosts config
+alias hosts="sudo vim /etc/hosts"
 
 
 # IP addresses
@@ -43,7 +53,7 @@ ZSH_THEME="steeef"
 
 # `cat` with beautiful colors. requires Pygments installed.
 # 							   sudo easy_install Pygments
-# alias c='pygmentize -O style=monokai -f console256 -g'
+alias c='pygmentize -O style=monokai -f console256 -g'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -71,12 +81,15 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+#
 #export PATH=/opt/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin
 #export PATH="$HOME/.rbenv/bin:$PATH"
 #eval "$(rbenv init - zsh)"
 #. ~/.nvm/nvm.sh
-export PATH="$HOME/.rbenv/bin:/usr/local/bin/npm:$PATH"
-eval "$(rbenv init - zsh)"
 export NODE_PATH="/usr/local/lib/node"
 
 . `brew --prefix`/etc/profile.d/z.sh
+export PATH="/usr/bin:$PATH"
+export PATH="/usr/local/php5/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:/usr/local/bin/npm:$PATH:/usr/local/go/bin"
+eval "$(rbenv init - zsh)"

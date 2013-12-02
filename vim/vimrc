@@ -17,7 +17,7 @@ let maplocalleader = "\\"
 
 " Presentation Settings
 set number						" Set Line numbering
-set tabstop=2					" Tabstops are 4 spaces
+set tabstop=2					" Tabstops are 2 spaces
 set shiftwidth=2				" Number of spaces for indent	
 set nowrap						" Do not wrap words (view) 
 set textwidth=0 				" Do not wrap word (insert)
@@ -31,6 +31,8 @@ set scrolloff=8 				" Keep the cursor 8 lines from the bottom when scolling
 set linespace=3					" Larger Line Height
 set go-=T						" Hides MacVim toolbar
 set hidden 						" Set Hidden for LustyExplorer
+set cursorline
+set cursorcolumn
 set backspace=indent,eol,start
 set clipboard=unnamed
 " Behaviours
@@ -55,6 +57,9 @@ nmap ,= mzgg=G\`z
 " KeyBindings
 "Clear search when you press ,/
 nmap <leader>/ :nohlsearch<CR>
+
+nmap <leader>ww :w<CR>
+nmap <leader>wq :wq<CR>
 
 "Change window key remap
 nmap <leader>w <C-w>w 
