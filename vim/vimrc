@@ -7,9 +7,9 @@ call pathogen#helptags()
 setlocal spell spelllang=en_us    " Set Spelling
 set nocompatible                  " Don't care about vi
 set encoding=utf-8
-filetype off                      " Set filetype stuff to on
-filetype plugin indent off
-filetype plugin indent on
+filetype on                      " Set filetype stuff to on
+filetype plugin on
+filetype indent on
 syntax on                         " Switch on syntax highlighting
 
 "Settings
@@ -17,7 +17,8 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 " Presentation Settings
-set number       " Set Line numbering
+set number
+set relativenumber       " Set Line numbering
 set tabstop=2    " Tabstops are 4 spaces
 set shiftwidth=2 " Number of spaces for indent
 set nowrap       " Do not wrap words (view)
@@ -57,6 +58,9 @@ nmap ,= mzgg=G\`z
 " KeyBindings
 " Clear search when you press ,/
 nmap <leader>/ :nohlsearch<CR>
+
+"SHIFT + ENTER to add an end keyword
+imap <S-CR> <CR><CR>end<Esc>-cc
 
 " leader w to save 
 nmap <leader>ww :w<CR>
@@ -151,3 +155,10 @@ nnoremap <silent> zz :exec "normal! zz" . float2nr(winheight(0)*0.1) . "\<Lt>C-E
 let g:airline#extensions#tabline#enabled = 1 " Smarter tabs
 let g:airline#extensions#tabline#left_sep = '>'
 let g:airline#extensions#tabline#left_alt_sep = '>'
+
+"Vertical-move
+let g:vertical_move_default_mapping = 0
+nmap <silent> <leader>j <Plug>(vertical_move_down)
+nmap <silent> <leader>k <Plug>(vertical_move_up)
+xmap <silent> <leader>j <Plug>(vertical_move_down)
+xmap <silent> <leader>k <Plug>(vertical_move_up)
