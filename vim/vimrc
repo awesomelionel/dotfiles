@@ -19,7 +19,8 @@ let maplocalleader = "\\"
 " Presentation Settings
 set number
 set relativenumber       " Set Line numbering
-set tabstop=2    " Tabstops are 4 spaces
+set tabstop=2    " Tabstops are 2 spaces
+set expandtab
 set shiftwidth=2 " Number of spaces for indent
 set nowrap       " Do not wrap words (view)
 set textwidth=0  " Do not wrap word (insert)
@@ -36,17 +37,17 @@ set hidden       " Set Hidden for LustyExplorer
 set backspace=indent,eol,start
 
 " Behaviours
-"au FocusLost * :wa				" This means whenever Vim loses focus, it saves the files in the buffer
-set history=100					" Keep some stuff in the history
-set nobackup					" Stop Vim making back up files
+"au FocusLost * :wa       " This means whenever Vim loses focus, it saves the files in the buffer
+set history=100         " Keep some stuff in the history
+set nobackup          " Stop Vim making back up files
 set noswapfile
-set clipboard=unnamed			" Anything copied will be in the clipboard
+set clipboard=unnamed     " Anything copied will be in the clipboard
 
 " Search Settings
-set incsearch					" Incrementally match the search
-set hlsearch					" Enable search highlighting
-set ignorecase					" set the search scan so that it ignores case when the search is all lower
-set smartcase					" case but recognizes uppercase if it's specified
+set incsearch         " Incrementally match the search
+set hlsearch          " Enable search highlighting
+set ignorecase          " set the search scan so that it ignores case when the search is all lower
+set smartcase         " case but recognizes uppercase if it's specified
 
 " setting autoindenting for all filetypes
 set autoindent
@@ -58,9 +59,6 @@ nmap ,= mzgg=G\`z
 " KeyBindings
 " Clear search when you press ,/
 nmap <leader>/ :nohlsearch<CR>
-
-"SHIFT + ENTER to add an end keyword
-imap <S-CR> <CR><CR>end<Esc>-cc
 
 " leader w to save 
 nmap <leader>ww :w<CR>
@@ -130,22 +128,22 @@ nmap <leader>bp :bprev<CR>
 
 " GUI and Colorscheme
 if has("gui_running")
-	set guifont=Menlo\ for\ Powerline:h12
-	colorscheme desert
-	winpos 0 0
-	winsize 190 45
-else	
-	colorscheme solarized
-	set background =dark
-	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-	if exists('$TMUX')
-		let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-		let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-	else
-		let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-		let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-	endif
+  set guifont=Menlo\ for\ Powerline:h12
+  colorscheme desert
+  winpos 0 0
+  winsize 190 45
+else  
+  colorscheme solarized
+  set background =dark
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  endif
 endif
 
 " use aesthetic middle of screen for "zz"
