@@ -36,4 +36,4 @@
 	url = https://github.com/vim-scripts/ZenCoding.vim.git
 [submodule "vim/bundle/matchit"]
 	path = vim/bundle/matchit
-	url = https://github.com/tsaleh/vim-matchit.git
+	url = https://github.com/vim-scripts/matchit.zip
