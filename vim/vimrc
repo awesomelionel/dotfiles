@@ -4,47 +4,44 @@ execute pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-setlocal spell spelllang=en_us  " Set Spelling
-set nocompatible 				" Don't care about vi
+setlocal spell spelllang=en_us " Set Spelling
+set nocompatible               " Don't care about vi
 set encoding=utf-8
-filetype off                	" Set filetype stuff to on
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
+filetype on                    " Set filetype stuff to on
 filetype plugin indent on
-syntax on 						" Switch on syntax highlighting
+syntax on                      " Switch on syntax highlighting
 
 "Settings
 let mapleader = ","
 let maplocalleader = "\\"
 
 " Presentation Settings
-set number						" Set Line numbering
-set tabstop=2					" Tabstops are 4 spaces
-set shiftwidth=2				" Number of spaces for indent	
-set nowrap						" Do not wrap words (view) 
-set textwidth=0 				" Do not wrap word (insert)
-set showcmd						" Show the current command in the lower right corner
-set showmode					" Show the current mode
-set showmatch 					" Show matching brackets.
-set ruler						" Line and column number of the cursor positions
-set visualbell					" use visual bell instead of beeps
-set wildmenu					" Make the command-line completion better
-set scrolloff=8 				" Keep the cursor 8 lines from the bottom when scolling
-set linespace=3					" Larger Line Height
-set go-=T						" Hides MacVim toolbar
-set hidden 						" Set Hidden for LustyExplorer
+set number                     " Set Line numbering
+set tabstop=2                  " Tabstops are 2 spaces
+set shiftwidth=2               " Number of spaces for indent
+set nowrap                     " Do not wrap words (view)
+set textwidth=0                " Do not wrap word (insert)
+set showcmd                    " Show the current command in the lower right corner
+set showmode                   " Show the current mode
+set showmatch                  " Show matching brackets.
+set ruler                      " Line and column number of the cursor positions
+set visualbell                 " use visual bell instead of beeps
+set wildmenu                   " Make the command-line completion better
+set scrolloff=8                " Keep the cursor 8 lines from the bottom when scolling
+set linespace=3                " Larger Line Height
+set go-=T                      " Hides MacVim toolbar
 set backspace=indent,eol,start
 " Behaviours
-"au FocusLost * :wa				" This means whenever Vim loses focus, it saves the files in the buffer
-set history=100					" Keep some stuff in the history
-set nobackup					" Stop Vim making back up files
+" au FocusLost * :wa           " This means whenever Vim loses focus, it saves the files in the buffer
+set history=100                " Keep some stuff in the history
+set nobackup                   " Stop Vim making back up files
 set noswapfile
-set clipboard=unnamed			" Anything copied will be in the clipboard
+set clipboard=unnamed          " Anything copied will be in the clipboard
 " Search Settings
-set incsearch					" Incrementally match the search
-set hlsearch					" Enable search highlighting
-set ignorecase					" set the search scan so that it ignores case when the search is all lower
-set smartcase					" case but recognizes uppercase if it's specified
+set incsearch                  " Incrementally match the search
+set hlsearch                   " Enable search highlighting
+set ignorecase                 " set the search scan so that it ignores case when the search is all lower
+set smartcase                  " case but recognizes uppercase if it's specified
 
 " setting autoindenting for all filetypes
 set autoindent
@@ -123,11 +120,6 @@ autocmd FileType php.html let b:surround_45 = "<?php \r ?>" "press -
 " CTRL p 
 :nmap ; :CtrlPBuffer<CR>
 
-" LustyJuggler suppress warning
-"let g:LustyJugglerSuppressRubyWarning=1
-
-" CoffeeScript Plugin
-"au BufWritePost *.coffee silent CoffeeMake!
 
 " GUI and Colorscheme
 if has("gui_running")
