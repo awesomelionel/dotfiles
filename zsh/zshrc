@@ -79,6 +79,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/php5/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 eval "$(rbenv init - zsh)"
 #export NODE_PATH="/usr/local/lib/node"
 #export PATH=/usr/local/php5/bin:$PATH

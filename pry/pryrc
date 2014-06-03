@@ -1,0 +1,11 @@
+# vi: set ft=ruby :
+$LOAD_PATH << '.'
+
+begin
+  require 'awesome_print'
+  Pry.config.print = proc { |output, value| output.puts value.ai(:indent =>2) }
+rescue LoadError => err
+  puts err.message
+  puts "no awesome_print :("
+end
+
